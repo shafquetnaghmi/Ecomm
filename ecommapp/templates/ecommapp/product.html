@@ -1,0 +1,31 @@
+{% extends 'ecommapp/main.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'ecommapp/product.css' %}">
+<div class="a0">
+    <h1>{{product.name}}</h1>
+    <img src="{{product.image.url}}" height="300px" width="200px">
+    <P>₹ {{product.price}}</P>
+</div>
+<div class="a1">
+    <div>
+        <p>Performance</p>
+        <P>{{product.performance}}</P>
+    </div>
+    <div>
+        <P>Display</P>
+        <P>{{product.Display}}</P>
+    </div>
+</div>
+<div class="a2">
+    <div>
+        <P>Camera</P>
+        <P>{{product.Camera}}</P>
+    </div>
+    <div>
+        <P>Battery</P>
+        <P>{{product.Battery}}</P>
+    </div>
+</div>
+
+{% endblock %}

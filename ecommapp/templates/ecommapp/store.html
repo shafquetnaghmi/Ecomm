@@ -1,0 +1,33 @@
+{% extends 'ecommapp/main.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'ecommapp/store.css' %}">
+<div>
+    <ul class="header">
+        <li>
+            <h1 id="logo">Ycomm</h1>
+        </li>
+        <div>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+            <li><a href="{% url 'signup' %}">Register</a> </li>
+        </div>
+    </ul>
+</div>
+<hr>
+{% for product in products %}
+<span class="product">
+    <a href="/cart/{{product.id}}">
+        <span>
+            <p id="name"><b>{{product.name}}</b></p>
+            <p> <img src="{{product.image.url}}" height="200px" width="200px"></p>
+            <p>₹ {{product.price}}</p>
+        </span>
+    </a>
+
+
+</span>
+
+{% endfor %}
+
+{% endblock %}

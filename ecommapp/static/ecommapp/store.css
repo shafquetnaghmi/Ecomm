@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0;
+    
+    
+}
+.header li{
+    list-style-type: none;
+}
+.header a{
+    text-decoration: none;
+}
+.product a{
+          text-decoration: none;
+}
+#name{
+    color:black;
+}
+.product{
+    float:left;
+    padding:10px;
+    margin-left:5%;
+}

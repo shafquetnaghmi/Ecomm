@@ -9,7 +9,7 @@ urlpatterns=[
         path('signup/',views.register,name="signup"),
         path('index/',views.index,name='index'),
         path('verify/', views.verify_code,name="verify"), 
-        path('store/',views.product_list,name="store"),
+        path('',views.product_list,name="store"),
         path('cart/<str:id>/',views.product_deatail,name="cart"),
         path('api/store/',ProductCreateAPIView.as_view(),name="store-api")    #api endpoints 
 

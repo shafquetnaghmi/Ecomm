@@ -21,8 +21,8 @@ from ecommapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('ecommapp.urls')),
-    path('store/',views.product_list,name="store"),
+    path('Ycomm',include('ecommapp.urls')),
+    path('',views.product_list,name="store"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
